@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - SANOUKA</title>
+  <meta name="description" content="SANOUKA Privacy Policy (iOS and Android)" />
+  <style>
+    :root{
+      --brand-600:#C98A00;
+      --brand-500:#FFBA00;
+      --brand-400:#FFC533;
+      --brand-200:#FFE7B3;
+
+      --bg:#ffffff;
+      --text:#0b0f1a;
+      --muted:#5b6472;
+      --border:#e6e8ee;
+      --card:#fafbfc;
+      --link:#0b57d0;
+
+      --radius:14px;
+      --max: 1100px;
+      --content: 720px;
+      --toc: 280px;
+
+      --shadow: 0 10px 24px rgba(16, 24, 40, 0.06);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      line-height: 1.8;
+      letter-spacing: 0.1px;
+    }
+
+    a{color: var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* Top header */
+    .top{
+      border-bottom: 1px solid var(--border);
+      background: #fff;
+    }
+    .top-inner{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px 18px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap: 16px;
+    }
+    .brand{
+      min-width: 200px;
+    }
+    .brand h1{
+      margin:0;
+      font-size: 13px;
+      letter-spacing: 0.9px;
+      text-transform: uppercase;
+    }
+    .brand .sub{
+      margin-top: 2px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .top-actions{
+      display:flex;
+      gap: 10px;
+      align-items:center;
+      flex-wrap: wrap;
+      justify-content:flex-end;
+    }
+    .pill{
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: 999px;
+      padding: 10px 12px;
+      font-size: 13px;
+      color: var(--muted);
+      display:flex;
+      gap: 10px;
+      align-items:center;
+    }
+    .pill strong{color: var(--text); font-weight: 700}
+    .dot{
+      width: 8px; height: 8px; border-radius: 999px;
+      background: var(--brand-500);
+      box-shadow: 0 0 0 3px rgba(255,186,0,0.20);
+    }
+
+    .btn{
+      border: 1px solid rgba(255,186,0,0.35);
+      background: linear-gradient(180deg, rgba(255,186,0,0.16), rgba(255,186,0,0.06));
+      color: var(--text);
+      border-radius: 999px;
+      padding: 10px 12px;
+      font-size: 13px;
+      cursor:pointer;
+    }
+    .btn:hover{box-shadow: 0 0 0 4px rgba(255,186,0,0.18)}
+    .btn:active{transform: translateY(1px)}
+
+    /* Layout */
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 24px 18px 80px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: var(--toc) minmax(0, var(--content));
+      gap: 28px;
+      align-items:start;
+    }
+    @media (max-width: 980px){
+      .grid{grid-template-columns: 1fr}
+    }
+
+    /* TOC */
+    .toc{
+      position: sticky;
+      top: 18px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+    @media (max-width: 980px){
+      .toc{position: static}
+    }
+    .toc h2{
+      margin: 0 0 10px;
+      font-size: 12px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .toc a{
+      display:block;
+      padding: 9px 10px;
+      border-radius: 10px;
+      color: var(--text);
+      font-size: 14px;
+      border: 1px solid transparent;
+      background: transparent;
+    }
+    .toc a:hover{
+      background: #fff;
+      border-color: rgba(255,186,0,0.20);
+      text-decoration:none;
+    }
+    .toc a:focus{
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(255,186,0,0.16);
+      border-color: rgba(255,186,0,0.25);
+    }
+    /* Remove selection highlight look */
+    .toc a:active{background: transparent}
+
+    .toc .note{
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* Content */
+    .content{
+      min-width: 0;
+    }
+
+    .hero{
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 26px 22px;
+      box-shadow: var(--shadow);
+    }
+    .hero h1{
+      margin: 0 0 10px;
+      font-size: 34px;
+      letter-spacing: -0.4px;
+      line-height: 1.2;
+    }
+    .hero p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 70ch;
+    }
+    .hero .meta{
+      margin-top: 14px;
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: var(--card);
+      border: 1px solid var(--border);
+    }
+
+    .section{
+      margin-top: 26px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+    }
+    .section h2{
+      margin: 18px 0 10px;
+      font-size: 20px;
+      letter-spacing: -0.1px;
+      line-height: 1.35;
+    }
+    .section p{
+      margin: 0 0 14px;
+      color: var(--text);
+      font-size: 15px;
+    }
+    .section ul{
+      margin: 8px 0 18px 18px;
+      padding:0;
+    }
+    .section li{margin: 7px 0; color: var(--text); font-size: 15px;}
+    .muted{color: var(--muted)}
+    .callout{
+      margin: 14px 0 18px;
+      padding: 14px 14px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(255,186,0,0.10), rgba(255,186,0,0.05));
+      border: 1px solid rgba(255,186,0,0.22);
+    }
+    .callout strong{color: #6b4300}
+
+    .footer{
+      margin-top: 34px;
+      padding: 18px 0 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    [id] { scroll-margin-top: 18px; }
+  </style>
+</head>
+
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <div class="brand">
+        <h1>SANOUKA</h1>
+        <div class="sub">Privacy Policy</div>
+      </div>
+
+      <div class="top-actions">
+        <div class="pill">
+          <span class="dot" aria-hidden="true"></span>
+          Last updated: <strong id="lastUpdated">2026-01-08</strong>
+        </div>
+        <div class="pill">
+          Contact: <a href="mailto:contact@sanou-ka.com"><strong>contact@sanou-ka.com</strong></a>
+        </div>
+        <button class="btn" type="button" id="copyBtn">Copy email</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+      <nav class="toc" aria-label="Table of contents">
+        <h2>Table of contents</h2>
+        <a href="#intro">Overview</a>
+        <a href="#s1">1. Information We Collect</a>
+        <a href="#s2">2. How We Use Your Information</a>
+        <a href="#s3">3. Data Sharing</a>
+        <a href="#s4">4. Third-Party Services</a>
+        <a href="#s5">5. Data Retention</a>
+        <a href="#s6">6. Your Rights</a>
+        <a href="#s7">7. Data Security</a>
+        <a href="#s8">8. Children's Privacy</a>
+        <a href="#s9">9. Changes to This Policy</a>
+        <a href="#s10">10. Contact Us</a>
+
+        <div class="note">
+          This page is intended to be clear, readable, and store-compliant (iOS and Android).
+        </div>
+      </nav>
+
+      <section class="content">
+        <div class="hero" id="intro">
+          <h1>Privacy Policy</h1>
+          <p>
+            This Privacy Policy explains what data SANOUKA collects, how it is used, and the choices available to you.
+            SANOUKA is a mobility information and decision-support application.
+          </p>
+          <div class="meta">
+            <span class="tag"><span class="dot" aria-hidden="true"></span> Scope: iOS and Android</span>
+            <span class="tag">Email-only account</span>
+            <span class="tag">Approximate location supported</span>
+          </div>
+        </div>
+
+        <div class="section" id="s1">
+          <h2>1. Information We Collect</h2>
+          <p>We collect only the data necessary to provide and improve our services.</p>
+
+          <p class="muted"><strong>a. Information you provide voluntarily</strong></p>
+          <ul>
+            <li>Email address (for account creation or communication)</li>
+            <li>Feedback, reports, or corrections submitted through the app</li>
+          </ul>
+
+          <p class="muted"><strong>b. Information collected automatically</strong></p>
+          <ul>
+            <li>Approximate location data (used to suggest relevant routes and mobility options)</li>
+            <li>Device information (operating system, app version)</li>
+            <li>App usage data (features used, interaction timestamps)</li>
+          </ul>
+
+          <div class="callout">
+            <strong>Note:</strong> SANOUKA does not collect precise real-time GPS tracking unless explicitly enabled by the user.
+          </div>
+        </div>
+
+        <div class="section" id="s2">
+          <h2>2. How We Use Your Information</h2>
+          <p>We use collected data to:</p>
+          <ul>
+            <li>Provide mobility information and route suggestions</li>
+            <li>Improve data quality and estimation models</li>
+            <li>Understand app usage to improve user experience</li>
+            <li>Maintain app security and stability</li>
+          </ul>
+          <div class="callout"><strong>We do not sell personal data.</strong></div>
+        </div>
+
+        <div class="section" id="s3">
+          <h2>3. Data Sharing</h2>
+          <p>SANOUKA may share aggregated and anonymized data only with:</p>
+          <ul>
+            <li>Mobility or transportation partners (for service integration or redirection)</li>
+            <li>Public or institutional stakeholders (for mobility analysis and planning)</li>
+          </ul>
+          <p class="muted">No personally identifiable information is shared without user consent.</p>
+        </div>
+
+        <div class="section" id="s4">
+          <h2>4. Third-Party Services</h2>
+          <p>We may use third-party services for:</p>
+          <ul>
+            <li>Analytics</li>
+            <li>Cloud hosting</li>
+            <li>Error monitoring</li>
+          </ul>
+          <p class="muted">These providers process data on our behalf and are required to apply appropriate data protection measures.</p>
+        </div>
+
+        <div class="section" id="s5">
+          <h2>5. Data Retention</h2>
+          <p>Personal data is retained only as long as necessary to:</p>
+          <ul>
+            <li>Provide the service</li>
+            <li>Improve platform performance</li>
+            <li>Comply with legal obligations</li>
+          </ul>
+          <p class="muted">Users may request deletion of their personal data at any time.</p>
+        </div>
+
+        <div class="section" id="s6">
+          <h2>6. Your Rights</h2>
+          <p>You may request:</p>
+          <ul>
+            <li>Access to your personal data</li>
+            <li>Correction or deletion of your personal data</li>
+          </ul>
+          <div class="callout">
+            <strong>How to request:</strong> Send an email to <a href="mailto:contact@sanou-ka.com">contact@sanou-ka.com</a>.
+          </div>
+        </div>
+
+        <div class="section" id="s7">
+          <h2>7. Data Security</h2>
+          <p>We implement reasonable technical and organizational measures to protect data from unauthorized access, loss, or misuse.</p>
+        </div>
+
+        <div class="section" id="s8">
+          <h2>8. Children's Privacy</h2>
+          <p>SANOUKA is not intended for children under the age of 13.</p>
+          <p class="muted">We do not knowingly collect personal data from children.</p>
+        </div>
+
+        <div class="section" id="s9">
+          <h2>9. Changes to This Policy</h2>
+          <p>We may update this Privacy Policy from time to time.</p>
+          <p class="muted">Any changes will be reflected on this page with an updated date.</p>
+        </div>
+
+        <div class="section" id="s10">
+          <h2>10. Contact Us</h2>
+          <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+          <ul>
+            <li>Email: <a href="mailto:contact@sanou-ka.com">contact@sanou-ka.com</a></li>
+            <li>Company: SANOUKA</li>
+            <li>Country: Cote d'Ivoire</li>
+          </ul>
+        </div>
+
+        <div class="footer">
+          <div>
+            Keep this page URL in your App Store and Google Play listings.
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    // Minimal JS: copy email only.
+    (function(){
+      const copyBtn = document.getElementById("copyBtn");
+      const email = "contact@sanou-ka.com";
+      copyBtn.addEventListener("click", async ()=>{
+        try{
+          await navigator.clipboard.writeText(email);
+          copyBtn.textContent = "Copied";
+          setTimeout(()=>{ copyBtn.textContent = "Copy email"; }, 1400);
+        }catch(e){
+          window.location.href = "mailto:" + email;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
