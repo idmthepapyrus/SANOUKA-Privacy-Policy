@@ -162,7 +162,6 @@
       box-shadow: 0 0 0 4px rgba(255,186,0,0.16);
       border-color: rgba(255,186,0,0.25);
     }
-    /* Remove selection highlight look */
     .toc a:active{background: transparent}
 
     .toc .note{
@@ -256,6 +255,99 @@
     }
 
     [id] { scroll-margin-top: 18px; }
+
+    /* ----------------------------- */
+    /* Mobile + tablet improvements  */
+    /* ----------------------------- */
+
+    /* Mobile improvements */
+    @media (max-width: 640px){
+      .top-inner{
+        padding: 14px 14px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .brand{
+        min-width: 0;
+      }
+
+      .top-actions{
+        width: 100%;
+        justify-content: flex-start;
+        gap: 8px;
+      }
+
+      .pill{
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .btn{
+        width: 100%;
+        text-align: center;
+      }
+
+      .wrap{
+        padding: 18px 14px 60px;
+      }
+
+      .grid{
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      /* Put TOC after hero on mobile for readability */
+      .toc{
+        order: 2;
+        position: static;
+        padding: 14px;
+      }
+      .content{
+        order: 1;
+      }
+
+      .toc a{
+        padding: 8px 8px;
+        font-size: 13px;
+      }
+
+      .hero{
+        padding: 18px 16px;
+      }
+      .hero h1{
+        font-size: 26px;
+      }
+
+      .section h2{
+        font-size: 18px;
+      }
+
+      .tag{
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      /* Prevent horizontal overflow from long emails/links */
+      a, strong, p, li{
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+    }
+
+    /* Tablet improvements */
+    @media (min-width: 641px) and (max-width: 980px){
+      .top-inner{
+        padding: 16px 16px;
+      }
+      .wrap{
+        padding: 22px 16px 70px;
+      }
+      .hero h1{
+        font-size: 30px;
+      }
+    }
   </style>
 </head>
 
@@ -447,4 +539,3 @@
   </script>
 </body>
 </html>
-
